@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+	<h1>LOGGED IN!</h1>
+<% else %>
 <div class="hero-unit"><h1>digibox App</h1>
 <p>
 
@@ -5,6 +8,8 @@
 
 </p>
 <p>
-	<%= link_to "Sign Up Here", "#", class:"btn-primary btn-large" %>
+	<%= link_to "Sign Up Here", new_user_registration_path, class:"btn-primary btn-large" %>
 
-</p></div>
+</p>
+<% end %>
+</div>
